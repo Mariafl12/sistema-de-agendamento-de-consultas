@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class SistemaAgendamento {
+    private List<Consulta> consultas = new ArrayList<>();
+
+    public void agendarConsulta(Consulta consulta) {
+        consultas.add(consulta);
+        System.out.println("Consulta agendada com sucesso.");
+    }
+
+    public void cancelarConsulta(Consulta consulta) {
+        if (consultas.remove(consulta)) {
+            System.out.println("Consulta cancelada com sucesso.");
+        } else {
+            System.out.println("Consulta não encontrada.");
+        }
+    }
+
+    public void visualizarConsultas() {
+        if (consultas.isEmpty()) {
+            System.out.println("Nenhuma consulta agendada.");
+        } else {
+            for (Consulta consulta : consultas) {
+                System.out.println("Consulta: " + consulta.getTipoConsulta() + " com " + consulta.getMedico() + " em " + consulta.getDataHora());
+            }
+        }
+    }
+}
+

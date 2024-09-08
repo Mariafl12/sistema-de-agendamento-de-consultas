@@ -1,0 +1,23 @@
+import java.time.LocalDateTime;
+
+public class Consulta {
+    private String tipoConsulta;
+    private String medico;
+    private LocalDateTime dataHora;
+
+    public Consulta(String tipoConsulta, String medico, LocalDateTime dataHora) {
+        this.tipoConsulta = tipoConsulta;
+        this.medico = medico;
+        this.dataHora = dataHora;
+    }
+
+    // Getters e Setters
+    public String getTipoConsulta() { return tipoConsulta; }
+    public void setTipoConsulta(String tipoConsulta) { this.tipoConsulta = tipoConsulta; }
+
+    public String getMedico() { return medico; }
+    public void setMedico(String medico) { this.medico = medico; }
+
+    public LocalDateTime getDataHora() { return dataHora; }
+    public void setDataHora(LocalDateTime dataHora) { this.dataHora = dataHora; }
+}

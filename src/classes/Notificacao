@@ -1,0 +1,22 @@
+public class Notificacao {
+    private String mensagem;
+    private boolean lida;
+
+    public Notificacao(String mensagem) {
+        this.mensagem = mensagem;
+        this.lida = false;
+    }
+
+    public void marcarComoLida() {
+        this.lida = true;
+        System.out.println("Notificação marcada como lida.");
+    }
+
+    public String getMensagem() {
+        return mensagem;
+    }
+
+    public boolean isLida() {
+        return lida;
+    }
+}
